@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-com</title>
+    <!-- Bootstrap CSS -->
+     
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Cart Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand" href="#">
+                <img src="./image/logo1.png" width="100px" height="55px" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Order History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Track Order</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <header class="header d-flex flex-column flex-md-row justify-content-between align-items-center p-3 text-white">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-12 col-md-12 d-flex align-items-center">
+                    <form class="form-inline w-100 d-flex align-items-center">
+                        <div class="input-group flex-grow-1">
+                            
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search mr-4"></i></span>
+                            </div>
+                        </div>
+                        <div class="cart-container">
+                        <div class="cart-info">
+                            <span class="cart-text">CART -</span> 
+                            <span class="cart-amount">RS. 00.00</span>
+                        </div>
+                        <div class="cart-icon-container">
+                            <span class="cart-badge">0</span>
+                            <i class="fas fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <!-- Category Menu Bar -->
+    <header class="header bg-white text-dark py-3">
+        <div class="">
+            <nav class="navbar navbar-expand-lg   navbar-light">
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#categoryNav"
+                    aria-controls="categoryNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse   navbar-collapse" id="categoryNav">
+                    <ul class="navbar-nav  mx-auto">
+                        <!-- Electronics -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle dropdown-toggle" href="#" id="electronicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Electronics <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" id="MobilesDrop" href="#">Mobiles<i class="fas fa-chevron-right"></i></a>
+                                    <ul class="dropdown-menu" aria-labelledby="MobilesDrop">
+                                        <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                                        <li><a class="dropdown-item" href="#">Feature Phones</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Laptops<i class="fas fa-chevron-right "></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Gaming Laptops</a></li>
+                                        <li><a class="dropdown-item" href="#">Business Laptops</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Cameras<i class="fas fa-chevron-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">DSLR</a></li>
+                                        <li><a class="dropdown-item" href="#">Mirrorless</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- TV & Appliances -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="appliancesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                TV & Appliances <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="appliancesDropdown">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">TV<i class="fas fa-chevron-right "></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Smart TV</a></li>
+                                        <li><a class="dropdown-item" href="#">LED TV</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Kitchen Appliances<i class="fas fa-chevron-right "></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Microwaves</a></li>
+                                        <li><a class="dropdown-item" href="#">Refrigerators</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Home Appliances<i class="fas fa-chevron-right "></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Washing Machines</a></li>
+                                        <li><a class="dropdown-item" href="#">Air Conditioners</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Men -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Men <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="menDropdown">
+                                <li><a class="dropdown-item" href="#">Clothing</a></li>
+                                <li><a class="dropdown-item" href="#">Footwear</a></li>
+                                <li><a class="dropdown-item" href="#">Watches</a></li>
+                            </ul>
+                        </li>
+                        <!-- Women -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="womenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Women <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="womenDropdown">
+                                <li><a class="dropdown-item" href="#">Clothing</a></li>
+                                <li><a class="dropdown-item" href="#">Footwear</a></li>
+                                <li><a class="dropdown-item" href="#">Jewellery</a></li>
+                            </ul>
+                        </li>
+                        <!-- Baby & Kids -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="babyKidsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Baby & Kids <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="babyKidsDropdown">
+                                <li><a class="dropdown-item" href="#">Clothing</a></li>
+                                <li><a class="dropdown-item" href="#">Toys</a></li>
+                                <li><a class="dropdown-item" href="#">School Supplies</a></li>
+                            </ul>
+                        </li>
+                        <!-- Home & Furniture -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="homeFurnitureDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Home & Furniture <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="homeFurnitureDropdown">
+                                <li><a class="dropdown-item" href="#">Furniture</a></li>
+                                <li><a class="dropdown-item" href="#">Home Decor</a></li>
+                                <li><a class="dropdown-item" href="#">Kitchenware</a></li>
+                            </ul>
+                        </li>
+                        <!-- Sports & Books -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="sportsBooksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sports & Books <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="sportsBooksDropdown">
+                                <li><a class="dropdown-item" href="#">Sports Equipment</a></li>
+                                <li><a class="dropdown-item" href="#">Books</a></li>
+                                <li><a class="dropdown-item" href="#">Musical Instruments</a></li>
+                            </ul>
+                        </li>
+                        <!-- Flight -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="flightDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Flight <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="flightDropdown">
+                                <li><a class="dropdown-item" href="#">Domestic Flights</a></li>
+                                <li><a class="dropdown-item" href="#">International Flights</a></li>
+                                <li><a class="dropdown-item" href="#">Holiday Packages</a></li>
+                            </ul>
+                        </li>
+                        <!-- Offer -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Offer One <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offerDropdown">
+                                <li><a class="dropdown-item" href="#">Special Discounts</a></li>
+                                <li><a class="dropdown-item" href="#">Limited Time Offers</a></li>
+                                <li><a class="dropdown-item" href="#">Clearance Sales</a></li>
+                            </ul>
+                        </li>
+                        <!-- Additional Category Example -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="additionalDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Additional Category <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="additionalDropdown">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Subcategory One</a>
+                                    <!-- <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Item 2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Subcategory Two</a>
+                                    <!-- <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Item 2</a></li>
+                                    </ul> -->
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>   
+    
+    <main class="flex-grow-1">
+        <!-- Banner Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 " src="./image/slider/slider1.webp" alt="First slide">
+                    <!-- <div class="carousel-caption d-none d-md-block"> -->
+                        <!-- <h5>First Slide</h5> -->
+                        <!-- <p>Description for the first slide.</p> -->
+                    <!-- </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./image/slider/slider2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>Second Slide</h5> -->
+                        <!-- <p>Description for the second slide.</p> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./image/slider/slider3.webp" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>Third Slide</h5> -->
+                        <!-- <p>Description for the third slide.</p> -->
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </main>
+    
+
+    <!-- Horizontal Scroll Bar Section -->
+    <section class="scrollable-section py-4">
+        <div class="">
+            <h2 class="ml-2">Top Deals On Fashion</h2>
+            <button class="scroll-button left" onclick="scrollLeft()">&#8249;</button>
+            <div class="scrollable-content" id="scrollableContent">
+                <!-- Example product cards -->
+                <div class="card">
+                    <img src="./image/hscroll/bag.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 18% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;698</span>.00 M.R.P<del>&#8377;25663</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Uppercase 36L pixel 01 kids bag</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./image/hscroll/lakme.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 17% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;576</span>.00 M.R.P<del>&#8377;694</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Lakme Perfect Radiance</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./image/hscroll/lakme9t.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 29% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;819</span>.00 M.R.P<del>&#8377;1150.00</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Lakme 9TO5 primer matte</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./image/hscroll/bodywash.jpg" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 25% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;2849</span>.00 M.R.P<del>&#8377;3800.00</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Be Bodywise Body Acne Reduction</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./image/hscroll/dot&key.jpg" class="card" height="51%" alt="Product 5">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 37% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;697</span>.00 M.R.P<del>&#8377;1099.00</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Dot&key vitamin c+E Super Bright</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./image/hscroll/sunscreen.jpg" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <p><span class="transparent-bgg"> 12% off</span><span style="color: brown;"> Limited time deal</span></p>
+                        <p class="card-title"><span style="font-size: 25px;">&#8377;798</span>.00 M.R.P<del>&#8377;840.00</del></p>
+                        <p class="card-text" style="color: black; font-weight: bold; font-size: medium;">Lakme sunscreen lotion</p>
+                    </div>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+            <button class="scroll-button right" onclick="scrollRight()">&#8250;</button>
+        </div>
+    </section>
+
+       <!-- <div class="d-flex justify-content-center  align-content-center m-5 rounded-3" >   
+           <img class="object-fit-contain" src="./image/slider/bann2.jpg" width="90%" alt="banner" >        
+       </div> -->
+
+       <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+        <div class="carousel-inner custom-carousel-inner">
+          <div class="carousel-item active custom-carousel-item">
+            <img src="./image/bnSlider/downSlid1.jpg" class="d-block w-100 custom-carousel-image" alt="...">
+          </div>
+          <div class="carousel-item custom-carousel-item">
+            <img src="./image/bnSlider/bannSlid2.avif" class="d-block w-100 custom-carousel-image" alt="...">
+          </div>
+          <div class="carousel-item custom-carousel-item">
+            <img src="./image/bnSlider/bannSlid3.jpg" class="d-block w-100 custom-carousel-image" alt="...">
+          </div>
+        </div>
+      </div>
+      
+      
+
+       <Button id="back-to-top" class="back-to-top">Back to Top</Button>
+       <!-- Footer Section -->
+    <!-- <div class="text-center my-4">
+        <button class="back-to-top">Back to Top</button>
+    </div> -->
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h5>Get to Know Us</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Ssmart Shop Science</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Connect with Us</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Make Money with Us</h5>
+                    <ul>
+                        <li><a href="#">Sell on Ssmart Shop</a></li>
+                        <li><a href="#">Sell under Ssmart Shop Accelerator</a></li>
+                        <li><a href="#">Protect and Build Your Brand</a></li>
+                        <li><a href="#">Ssmart shop Global Selling</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Fulfillment by Ssmart</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Ssmart Pay on Merchants</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Let Us Help You</h5>
+                    <ul>
+                        <li><a href="#">COVID-19 and Ssmart Shop</a></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Returns Centre</a></li>
+                        <li><a href="#">100% Purchase Protection</a></li>
+                        <li><a href="#">Ssmart Shop App Download</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: rgb(24, 22, 22); border-width: 1px; border-style: solid;" />
+            <div class="text-center mt-4">
+                <a href="#"><img src="./image/logo1.png" alt="Ssmart Shop" style="width: 100px;"></a>
+                <p class="mt-2">© 2024, NDHSuperMarket.com</p>
+                <div>
+                    <a href="#" class="text-white mx-2">English</a>
+                    <a href="#" class="text-white mx-2">India</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollContainer = document.getElementById('scrollableContent');
+
+            document.querySelector('.scroll-button.left').addEventListener('click', function () {
+                scrollContainer.scrollBy({
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+
+            document.querySelector('.scroll-button.right').addEventListener('click', function () {
+                scrollContainer.scrollBy({
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <!-- // 3 header  -->
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.dropdown-toggle').on("click", function (e) {
+                if (!$(this).next('ul').hasClass('show')) {
+                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                }
+                var $subMenu = $(this).next("ul");
+                $subMenu.toggleClass('show');
+
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                    $('.dropdown-submenu .show').removeClass("show");
+                });
+
+                return false;
+            });
+        });
+    </script>
+    <script>
+        document.getElementById("back-to-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+<script>
+    var myCarousel = document.querySelector('#customCarousel')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 1000,
+      ride: 'carousel'
+    })
+  </script>
+  
+</body>
+</html>

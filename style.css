@@ -1,0 +1,468 @@
+Global Styles
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --footer-bg-color: #343a40;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --hover-color: #ffc107;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Header Styles */
+.header {
+    /* background-color: var(--secondary-color); */
+    background-color: lightgreen;
+    color: var(--text-light);
+}
+
+.header .navbar {
+    padding: 0;
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: var(--hover-color);
+}
+
+.header .dropdown-menu {
+    /* background-color: var(--secondary-color); */
+    background-color: white;
+    border: none;
+}
+
+.header .dropdown-item {
+    color: var(--text-light);
+}
+
+.header .dropdown-item:hover {
+    background-color: lightgreen;
+}
+
+.header .dropdown-menu .dropdown-menu {
+    /* margin-left: 1rem; */
+    margin-right: 1rem;
+    margin-top: -1rem;
+}
+
+.header .dropdown-submenu {
+    position: relative;
+}
+
+.header .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-toggle::after {
+    display: none; 
+ }
+
+ .nav-item.dropdown.show .fa-chevron-down {
+    transform: rotate(180deg);
+ }
+
+ .fa-chevron-right{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+} 
+
+
+
+
+/* Styling for right chevron icon */
+/* .nav-item .dropdown-submenu .fa-chevron-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    transition: opacity 0.3s ease;
+    opacity: 0.6;
+} */
+
+/* Hover effect for the right chevron icon */
+/* .nav-item .dropdown-submenu:hover .fa-chevron-right {
+    opacity: 1;
+} */
+
+/* Dropdown toggle icon rotation */
+/* .nav-item .dropdown-toggle .fa-chevron-down {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown.show .fa-chevron-down {
+    transform: rotate(180deg);
+} */
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+    .nav-item .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+    
+    .nav-item .dropdown-submenu .fa-chevron-right {
+        right: 15px;
+    }
+} */
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .header .navbar-nav {
+        text-align: center;
+    }
+
+    .header .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .header .navbar-toggler {
+        margin-right: 0;
+    }
+    
+    .form-inline {
+        width: 100%;
+        
+        justify-content: center;
+        
+    }
+    
+    .form-control {
+        width: 60%;
+    }
+    
+    .btn-outline-light {
+        width: 35%;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-dark .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+    }
+    
+    .navbar-dark .navbar-nav .dropdown-menu .dropdown-menu {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+
+/* Custom CSS for Carousel */
+.carousel-item img {
+    max-height: 400px;
+    /* height: 15?0vh */
+    /* object-fit: cover; */
+}
+
+/* Cart Badge Styling */
+.cart-badge {
+    top: -10px;
+    right: -10px;
+    font-size: 0.75rem;
+}
+
+ /* Custom CSS for Horizontal Scroll Bar */
+
+ .scrollable-section {
+    background-color: rgb(250, 247, 247);
+    padding: 10px 0;
+    position: relative;
+}
+
+.scrollable-content {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.scrollable-content .card {
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: 18rem;
+}
+
+/* Hide scrollbars on webkit browsers */
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Add a scrollbar for other browsers */
+.scrollable-content {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.transparent-bgg {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    border-radius: 10%;
+    width: 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-button {
+        width: 40px;
+        height: 70px;
+        font-size: 12px;
+    }
+}
+/* .wishlist-button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+} */
+.features-list {
+    list-style-type: none;
+    padding: 0;
+}
+.features-list li {
+    margin-bottom: 5px;
+}
+
+
+/* // foooter */
+.footer {
+    background-color: rgb(61, 63, 61);
+    color: white;
+    padding: 20px 0;
+}
+.footer h5 {
+    margin-bottom: 20px;
+}
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer ul li {
+    margin-bottom: 10px;
+}
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.back-to-top {
+    background-color: rgb(74, 78, 74);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.transparent-bgg {
+    background-color: red; 
+    color: white; 
+    padding: 4px; 
+    /* border-radius: 5px;  */
+  }
+
+
+/* // 2 header  */
+
+.header {
+    background-color: lightgreen;
+}
+
+.cart-badge {
+    top: -10px;
+    right: -10px;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group-prepend {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+}
+
+.input-group-text i {
+    color: #ffffff;
+    
+}
+
+.form-control {
+    flex: 1;
+    margin-right: 0.5rem;
+    padding-left: 2.5rem; /* Adjust padding to make space for the icon */
+}
+
+
+@media (max-width: 576px) {
+    .form-inline {
+        flex-direction: column;
+        width: 100%;
+    }
+    .form-inline .form-control,
+    .form-inline .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .cart-container {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 577px) {
+    .form-inline {
+        justify-content: space-between; /* Ensure space between search input/button and cart icon */
+    }
+}
+
+.banner img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 70%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+
+
+
+/* // bannerSlider */
+#customCarousel {
+    margin: 20px; /* Adds margin on all sides */
+  }
+  
+  .custom-carousel-inner .custom-carousel-item .custom-carousel-image {
+    /* object-fit: cover;  */
+    height: 400px; /* Sets a fixed height for the carousel items */
+  }
+  
+  @media (max-width: 768px) {
+    .custom-carousel-inner .custom-carousel-item .custom-carousel-image {
+      height: 250px; /* Adjusts the height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .custom-carousel-inner .custom-carousel-item .custom-carousel-image {
+      height: 200px; /* Further adjusts the height for even smaller screens */
+    }
+  }
+  
+
+.cart-badge {
+    position: relative;
+
+    top: -10px;
+    right: 0;
+    background-color: #ffc107;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+ 
+.cart-info {
+    font-size: 16px;
+    padding: 7px;
+    background-color: white;
+    color: #000000;
+    margin: 2px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 5px;
+    margin: 3px;
+    
+}
+
+.cart-icon-container{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.cart-amount {
+    color: lightgreen;
+}
+
+
+
+
